@@ -1,5 +1,6 @@
 :root {
     --grayColor: rgba(0, 0, 0, 0.3);
+    --blackColor: rgba(0, 0, 0, 1);
     --borderRadius: 25px;
 }
 
@@ -14,11 +15,133 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+ul,
+li {
     margin: 0;
     padding: 0;
 }
 
 body {
     font-family: 'Ubuntu', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 35px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--grayColor);
+    position: fixed;
+    width: 100%;
+}
+
+.header .header__logo {
+    font-size: 22px;
+    color: var(--blackColor);
+    cursor: pointer;
+}
+
+.header .header__menulist {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__menulist .menulist__item {
+    padding: 0px 35px;
+    cursor: pointer;
+}
+
+.header .header__icons .header__icon {
+    padding: 0px 5px;
+    cursor: pointer;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.main__photobox {
+    background-image: url(https://picsum.photos/1000/1000/?random);
+    display: flex;
+    align-items: center;
+    padding-left: 35px;
+}
+
+.photobox__navigation {
+    list-style: none;
+}
+
+.photobox__navigation .navigation__item {
+    padding: 8px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.main__article {
+    background-color: rgba(251, 235, 235, 1);
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+}
+
+.article__body {
+    display: grid;
+    height: 100%;
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 90px;
+}
+
+.article__title {
+    font-size: 50px;
+}
+
+.article__pagecounter {
+    align-self: center;
+}
+
+.article__pagecounter .pagecounter__currentpage {
+    font-size: 35px;
+    font-weight: 600;
+    color: var(--blackColor);
+}
+
+.article__pagecounter .pagecounter__totalpage {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--grayColor);
+}
+
+.article__footer {
+    width: 100%;
+    padding: 10px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+
+.article__footer .navigation__buttons .navigation__arrowbutton {
+    padding: 0px 5px 0px 0px;
+    font-size: 25px;
+    color: var(--grayColor);
+}
+
+.article__sns {
+    display: flex;
+    justify-content: space-between;
+    color: var(--grayColor);
+}
+
+.sns__item {
+    padding: 0px 5px;
 }
